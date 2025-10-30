@@ -1,3 +1,4 @@
+
 ![](IMG_5215.JPG)
 
 # Theory / Concept / Inspiration
@@ -46,11 +47,11 @@ For the ITC side of things, we strongly recommend using a quality set of headpho
 * MAX4466 Electret Mic Module, we sourced ours from Amazon
 * LM386 Audio Amp Module, also sourced from Amazon
 * MT3608 DC-DC Boost Module, also source from Amazon
-* 16550 Lithium battery, from Alliexpress
+* 18650 Lithium battery, from Alliexpress
 * 10k volume pot with integrated switch
 * 100uF electrolytic capacitor
 * 10k - 33k resistor (see below for info)
-* 3.5mm stereo jack (5 pin, tip-ring-sleeve, with sunts) (two required)
+* 3.5mm stereo jack (5 pin, tip-ring-sleeve, with shunts) (two required)
 * hookup wire, solder, tools, etc.
 
   ![](parts.jpg)
@@ -61,7 +62,7 @@ For the ITC side of things, we strongly recommend using a quality set of headpho
 
 Basically we're intercepting the audio output from the ATS-Mini at the built-in headphone jack, then re-routing it through some extra components. This results in additional noise and degraded audio quality, which is kind of the point.
 
-Our original plan was to incorporate an 'echo box' based on Frank Sumption's design, but we were unable to find enough detailed information regarding how that part of Frank's Boxes was actually deisgned or constructed. After a few design attempts were stymied we opted for a second-best design.
+Our original plan was to incorporate an 'echo box' based on Frank Sumption's design, but we were unable to find enough detailed information regarding how that part of Frank's Boxes were actually deisgned or constructed. After a few design attempts were stymied we opted for a second-best design.
 
 The electret mic module is installed in its own isolated (and marginally sound-proofed) space within the SB-ATS enclosure. Its purpose is not to capture traditional audio (as in, it's not there to detect vibrations of the ambient air), but rather it's there to offer an additional path for potential communications - either by vibrating the mic's diaphragm, or directly manipulating the EM fields around it.
 
@@ -73,7 +74,7 @@ An analog volume control is used to set the desired output level, and the (mono)
 
 In addition, a second 3.5 mm jack is provided as an 'Aux-Out', incase researchers would like to record the SB-ATS audio feed directly. This jack carries audio on the left line only, the idea being researchers could also record ambient location sounds on the right channel then compare the two later. This may be of particular interest to people employing the Estes method.
 
-Finally, we opted to replace the original ~800 mAh battery with a larger 16550 unit, although this is optional. We mostly did it because we had a few of the bigger batteries onhand, and we weren't sure what sort of additional demand the additional audio components would put on the battery.
+Finally, we opted to replace the original ~800 mAh battery with a larger 18650 unit, although this is optional. We mostly did it because we had a few of the bigger batteries onhand, and we weren't sure what sort of additional demand the additional audio components would put on the battery.
 
   ![](sbats_wiring.jpg)
 
@@ -97,5 +98,5 @@ The back plate is secured with M3x6 bolts, which thread into M3 heat-set nuts (4
 
 # Firmware
 
-Please see here for the firmware:
+Please see here for the modified SB-ATS firmware:
 https://github.com/PurpleCatGirl/sb-ats_firmware
