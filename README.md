@@ -18,6 +18,7 @@ If you're interest in any of this stuff, we highly recommend checking out the fo
 * https://youtu.be/FX2DBT95mBo?si=R7OyNMxOrRMWFfxy
 
 
+
 # Operation
 
 The radio side of things is fairly simple since it's still basically an ATS-Mini at heart, we've just added an extra menu function. First select your band (VHF or MW are best, but it works with any available band). Optionally you can also set your step size. 
@@ -29,6 +30,7 @@ To exit SB-ATS mode just click the encoder, the radio will return to normal func
 And finally, while in SB-ATS mode you can change the sweep direction by turning the encoder left or right.
 
 For the ITC side of things, we strongly recommend using a quality set of headphones. If you want to employ the Estes method then a set of noise-attenuating (not noise cancelling!) drummers' headphones are recommended. For our own purposes we've had fairly good results with a basic set of studio 'phones.
+
 
 
 # Bill of Materials
@@ -45,7 +47,8 @@ For the ITC side of things, we strongly recommend using a quality set of headpho
 * hookup wire, solder, tools, etc.
 
 
-# Design / Assembly Notes
+
+# Electronics Assembly Notes
 
 Basically we're intercepting the audio output from the ATS-Mini at the built-in headphone jack, then re-routing it through some extra components. This results in additional noise and degraded audio quality, which is kind of the point.
 
@@ -64,7 +67,22 @@ Finally, we opted to replace the original ~800 MAh battery with a larger 16550 u
 (TODO: simple wiring diagram goes here)
 
 
+
 # Firmware
 
 Please see here for the firmware:
 https://github.com/PurpleCatGirl/sb-ats_firmware
+
+
+
+# Enclosure Hardware Assembly Notes
+
+The box itself is 3d printed. All the stl files are included in this repository, along with a 3mf file that's formatted for the Bambu P1S.
+
+The enclosure's a little rough around the edges, but it definitely works as proof-of-concept. 
+
+You can use either hot-melt glue or superglue to fasten the various modules into the lower half of the enclosure. Our volume-power knob came with a threaded nut which holds it down. The ATS-Mini screen and mainboard may require a little fiddling to fit it into place. Then it can be held down with short self-tapping screws in the four corners. 
+
+Or if you strip the plastic like we did on one of our prototypes, you can drill the mounting holes straight through then use M2x10 bolts and nuts to secure the ATS-Mini mainboard.
+
+The back plate is secured with M3x6 bolts, which thread into M3 heat-set nuts (4.2mm od) in the front enclosure.
