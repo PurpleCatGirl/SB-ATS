@@ -6,7 +6,7 @@ SB-ATS is a Spirit Box (or ghost box) based on the ATS-Mini radio.
 
 What is a Spirit Box? To paraphrase Greg Newkirk (from Planet Weird, Haunted Objects Podcast, Hellier, & more), it is: A radio that's been intentionally broken in a very specific way, in order to facilitate communications with ghosts, spirits, aliens, or ultraterrestrials.
 
-The SB-7 is a well-known example, as are Frank's Boxes.
+The SB-7 is a well-known example, as are Frank Sumption's Ghost Boxes.
 
 After a recent Haunted Objects Podcast series took a closer look at Instrumental Trans-Communication (aka ITC), we and our girlfriend were inspired to try and build our own take on the concept. We'd recently found out about the ATS-Mini and its enthusiastic following, and being vaguely familiar with its hardware and software we thought it would be a perfect candidate to build our own Spirit Box around.
 
@@ -19,6 +19,11 @@ If you're interest in any of this stuff, we highly recommend checking out the fo
 * https://youtu.be/RcoLuyAZ9i8?si=7ffe344x2f6HuvYi
 * https://youtu.be/FX2DBT95mBo?si=R7OyNMxOrRMWFfxy
 
+Read about Frank Sumption's original designs here:
+* https://www.scribd.com/doc/149011303/Franks-Box-6-19
+
+The ATS-Mini project documentation can be found here:
+* https://esp32-si4732.github.io/ats-mini/
 
 
 # Operation
@@ -62,13 +67,15 @@ The electret mic module is installed in its own isolated (and marginally sound-p
 
 Audio out from the ATS-Mini headphone jack is mixed with the audio out from the mic module (with built-in pre-amp). Unfortunately the mic module we're using has a DC bias to its output (bias is vcc / 2), so before we tie that to the radio's output we put it through a 100uF capacitor in series with a resistor. The resistor value may vary depending on your set-up, we've found 10k to 33k is around the correct range.
 
-This blended audio is fed together into a single-channel LM386 audio amp. An analog volume control is used to set the desired output level, and the (mono) signal is routed through both Left and Right sides of a 3.5 mm stereo jack. The shunt signal is then directed to the built-in speaker, which has been positioned at the front of the new enclosure.
+This blended audio is fed together into a single-channel LM386 audio amp. This amp module needs at least 5 vdc which is higher than the ~3.7 volts available to us, so we're powering it with a DC-DC boost module based on the MT3608. We have this adjusted to supply between 7 and 9 volts. 
 
-In addition, a second 3.5 mm jack is provided as an 'Aux-Out', incase researchers would like to record the SB-ATS audio feed directly. This jack carries audio on the left line only, the idea being researchers could also record ambient sounds on the right channel then compare the two later. This may be of particular interest to people employing the Estes method.
+An analog volume control is used to set the desired output level, and the (mono) signal is routed through both Left and Right sides of a 3.5 mm stereo headphones jack. The shunt signal is then directed to the built-in speaker, which has been positioned at the front of the new enclosure.
 
-Finally, we opted to replace the original ~800 MAh battery with a larger 16550 unit, although this is strictly-speaking optional. We mostly did it because we had a few of the bigger batteries onhand, and we weren't sure what sort of additional demand the additional audio components would put on the battery.
+In addition, a second 3.5 mm jack is provided as an 'Aux-Out', incase researchers would like to record the SB-ATS audio feed directly. This jack carries audio on the left line only, the idea being researchers could also record ambient location sounds on the right channel then compare the two later. This may be of particular interest to people employing the Estes method.
 
-(TODO: simple wiring diagram goes here)
+Finally, we opted to replace the original ~800 mAh battery with a larger 16550 unit, although this is optional. We mostly did it because we had a few of the bigger batteries onhand, and we weren't sure what sort of additional demand the additional audio components would put on the battery.
+
+  ![](sbats_wiring.jpg)
 
 
 
