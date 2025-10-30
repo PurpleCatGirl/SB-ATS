@@ -1,3 +1,5 @@
+![](IMG_5215.JPG)
+
 # Theory / Concept / Inspiration
 
 SB-ATS is a Spirit Box (or ghost box) based on the ATS-Mini radio. 
@@ -46,6 +48,8 @@ For the ITC side of things, we strongly recommend using a quality set of headpho
 * 3.5mm stereo jack (5 pin, tip-ring-sleeve, with sunts) (two required)
 * hookup wire, solder, tools, etc.
 
+  ![](parts.jpg)
+
 
 
 # Electronics Assembly Notes
@@ -68,13 +72,6 @@ Finally, we opted to replace the original ~800 MAh battery with a larger 16550 u
 
 
 
-# Firmware
-
-Please see here for the firmware:
-https://github.com/PurpleCatGirl/sb-ats_firmware
-
-
-
 # Enclosure Hardware Assembly Notes
 
 The box itself is 3d printed. All the stl files are included in this repository, along with a 3mf file that's formatted for the Bambu P1S.
@@ -86,3 +83,12 @@ You can use either hot-melt glue or superglue to fasten the various modules into
 Or if you strip the plastic like we did on one of our prototypes, you can drill the mounting holes straight through then use M2x10 bolts and nuts to secure the ATS-Mini mainboard.
 
 The back plate is secured with M3x6 bolts, which thread into M3 heat-set nuts (4.2mm od) in the front enclosure.
+
+![](IMG_5221.JPG)
+
+
+
+# Firmware
+
+Please see here for the firmware:
+https://github.com/PurpleCatGirl/sb-ats_firmware
